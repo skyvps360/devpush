@@ -104,7 +104,7 @@ services:
       - runner
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.deployment-not-found.rule=HostRegexp(`^(.+)\\.${DEPLOY_DOMAIN}$`)"
+      - "traefik.http.routers.deployment-not-found.rule=HostRegexp(`^(.+)\\.$${DEPLOY_DOMAIN}$$`)"
       - "traefik.http.routers.deployment-not-found.entrypoints=web"
       - "traefik.http.routers.deployment-not-found.priority=1"
       - "traefik.http.routers.deployment-not-found.service=noop@internal"
